@@ -29,6 +29,7 @@ export default defineConfig({
       environment: ['repl', 'test'],
     },
     () => import('@adonisjs/static/static_provider'),
+    () => import('@adonisjs/core/providers/edge_provider'),
   ],
 
   /*
@@ -68,6 +69,10 @@ export default defineConfig({
   metaFiles: [
     {
       pattern: 'public/**',
+      reloadServer: false,
+    },
+    {
+      pattern: 'resources/views/**/*.edge',
       reloadServer: false,
     },
   ],

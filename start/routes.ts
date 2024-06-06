@@ -8,5 +8,10 @@
 */
 
 import router from '@adonisjs/core/services/router'
+const HomeController = () => import('#controllers/home_controller')
+// import UsersController from '#controllers/users_controller'
 
-router.get('/', async () => 'It works!')
+router.get('/', async ({ response }) => {
+  response.redirect('/workspace')
+})
+router.get('/workspace', [HomeController, 'workspace'])
