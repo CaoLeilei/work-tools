@@ -1,0 +1,25 @@
+@layout.base()
+  @slot('meta')
+    @if ($slots.meta)
+    {{{ await $slots.meta()}}}
+    @endif
+  @endslot
+  <!-- 页面中的样式内容 -->
+  @slot('styles')
+    @if ($slots.styles)
+    {{{ await $slots.styles()}}}
+    @endif
+  @endslot
+  <body class="d-flex flex-column">
+    <script src="/js/demo-theme.min.js?1685973381"></script>
+    <div class="page page-center">
+      {{{ await $slots.main() }}}
+    </div>
+  </body>
+  <!-- 页面必须的脚本内容 -->
+  @slot('scripts')
+    @if ($slots.scripts)
+    {{{ await $slots.scripts()}}}
+    @endif
+  @endslot
+@end

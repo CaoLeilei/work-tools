@@ -7,12 +7,16 @@
       {{{ await $slots.meta() }}}
     @endif
     <title>Dashboard - Tabler - Premium and Open Source dashboard template with responsive and high quality UI.</title>
+
     <!-- CSS files -->
     <link href="/css/tabler.min.css?1692870487" rel="stylesheet"/>
     <link href="/css/tabler-flags.min.css?1692870487" rel="stylesheet"/>
     <link href="/css/tabler-payments.min.css?1692870487" rel="stylesheet"/>
     <link href="/css/tabler-vendors.min.css?1692870487" rel="stylesheet"/>
     <link href="/css/demo.min.css?1692870487" rel="stylesheet"/>
+    @if ($slots.meta)
+      {{{ await $slots.meta()}}}
+    @endif
     <style>
       :root {
       	--tblr-font-sans-serif: 'Inter Var', -apple-system, BlinkMacSystemFont, San Francisco, Segoe UI, Roboto, Helvetica Neue, sans-serif;
@@ -20,14 +24,25 @@
       body {
       	font-feature-settings: "cv03", "cv04", "cv11";
       }
+      form {
+        margin-block-end: 0;
+      }
     </style>
     @if ($slots.styles)
       {{{ await $slots.styles() }}}
     @endif
   </head>
-  <body>
-    @if ($slots.body)
-      {{{ await $slots.body() }}}
-    @endif
-  </body>
+  {{{ await $slots.main() }}}
+
+  <!-- Libs JS -->
+  <!-- <script src="/libs/apexcharts/dist/apexcharts.min.js?1685973381" defer></script>
+  <script src="/libs/jsvectormap/dist/js/jsvectormap.min.js?1685973381" defer></script>
+  <script src="/libs/jsvectormap/dist/maps/world.js?1685973381" defer></script>
+  <script src="/libs/jsvectormap/dist/maps/world-merc.js?1685973381" defer></script> -->
+  <!-- Tabler Core -->
+  <!-- <script src="/js/tabler.min.js?1685973381" defer></script> -->
+  <script src="/js/demo.min.js?1685973381" defer></script>
+  @if ($slots.scripts)
+    {{{ await $slots.scripts() }}}
+  @endif
 </html>

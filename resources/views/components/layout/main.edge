@@ -1,0 +1,40 @@
+@layout.base()
+  @slot('meta')
+    @if ($slots.meta)
+    {{{ await $slots.meta()}}}
+    @endif
+  @endslot
+  <!-- 页面中的样式内容 -->
+  @slot('styles')
+    @if ($slots.styles)
+    {{{ await $slots.styles()}}}
+    @endif
+  @endslot
+  <body>
+    <script src="/js/demo-theme.min.js?1685973381"></script>
+    <div class="page">
+      @!component('components/aside')
+      @!component('components/navbar')
+
+      <div class="page-wrapper">
+        @if ($slots.pageHeader)
+          <div class="page-header d-print-none">
+            {{{ await $slots.pageHeader() }}}
+          </div>
+        @endif
+        <div class="page-body">
+          {{{ await $slots.main() }}}
+        </div>
+
+        @!component('components/footer')
+      </div>
+    </div>
+  </body>
+
+  <!-- 页面必须的脚本内容 -->
+  @slot('scripts')
+    @if ($slots.scripts)
+    {{{ await $slots.scripts()}}}
+    @endif
+  @endslot
+@end
