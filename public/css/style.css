@@ -1,0 +1,10 @@
+.line-clamp-1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card {
+  --tblr-card-cap-padding-y: 0.75rem;
+  --tblr-card-cap-padding-x: 1rem;
+}
