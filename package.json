@@ -40,6 +40,8 @@
     "@japa/plugin-adonisjs": "^3.0.1",
     "@japa/runner": "^3.1.4",
     "@swc/core": "^1.5.7",
+    "@types/better-sqlite3": "^7.6.11",
+    "@types/luxon": "^3.4.2",
     "@types/node": "^20.12.12",
     "autoprefixer": "^10.4.19",
     "autosize": "^6.0.1",
@@ -58,10 +60,14 @@
     "typescript": "^5.4.5"
   },
   "dependencies": {
+    "@adonisjs/auth": "^9.2.3",
     "@adonisjs/core": "^6.9.0",
+    "@adonisjs/lucid": "^21.1.0",
     "@adonisjs/static": "^1.1.1",
+    "better-sqlite3": "^11.1.2",
     "bootstrap": "^5.3.3",
     "edge.js": "^6.0.2",
+    "luxon": "^3.4.4",
     "reflect-metadata": "^0.2.2"
   },
   "hotHook": {
