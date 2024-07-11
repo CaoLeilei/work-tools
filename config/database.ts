@@ -2,6 +2,7 @@ import app from '@adonisjs/core/services/app'
 import { defineConfig } from '@adonisjs/lucid'
 
 console.log('app.tmpPath:', app.tmpPath('db.sqlite3'))
+console.log('evn', process.env.NODE_ENV)
 
 const dbConfig = defineConfig({
   connection: 'sqlite',

@@ -1,0 +1,129 @@
+@layout.main({ title: "Welcome page title" })
+  @slot('meta')
+    <meta name="description" content="A welcome page made with EdgeJS">
+  @endslot
+
+  @slot('styles')
+  <style type=""></style>
+  @endslot
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-9">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="card card-sm mb-3">
+              <div class="card-header">
+                <h3 class="card-title">今日待办</h3>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card card-sm mb-3">
+              <div class="card-header">
+                <h3 class="card-title">我的BUG</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card card-sm mb-3">
+          <div class="card-header">
+            <h3 class="card-title">我的项目</h3>
+          </div>
+          <div class="card-body">
+            <div class="row row-cards">
+              <div class="col-lg-4">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row align-items-center">
+                      <div class="col-3">
+                        <img src="https://cdn.dribbble.com/users/844826/screenshots/14553706/media/2be9a4847b939e02702648d058cf2df8.png" alt="Food Deliver UI dashboards" class="rounded">
+                      </div>
+                      <div class="col">
+                        <h3 class="card-title mb-1 line-clamp-1">
+                          <a href="#" class="text-reset">Food Deliver UI dashboards</a>
+                        </h3>
+                        <div class="text-secondary line-clamp-1">
+                          Updated 2 hours ago
+                        </div>
+                        <div class="mt-3">
+                          <div class="row g-2 align-items-center">
+                            <div class="col-auto">
+                              25%
+                            </div>
+                            <div class="col">
+                              <div class="progress progress-sm">
+                                <div class="progress-bar" style="width: 25%" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" aria-label="25% Complete">
+                                  <span class="visually-hidden">25% Complete</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row align-items-center">
+                      <div class="col-3">
+                        <img src="https://cdn.dribbble.com/users/844826/screenshots/14547977/media/e7749bd1b09d9415b8dc265a7dbe81f6.png" alt="Projects Dashboards" class="rounded">
+                      </div>
+                      <div class="col">
+                        <h3 class="card-title mb-1 line-clamp-1">
+                          <a href="#" class="text-reset">Projects Dashboards</a>
+                        </h3>
+                        <div class="text-secondary line-clamp-1">
+                          Updated 2 hours ago
+                        </div>
+                        <div class="mt-3">
+                          <div class="row g-2 align-items-center">
+                            <div class="col-auto">
+                              76%
+                            </div>
+                            <div class="col">
+                              <div class="progress progress-sm">
+                                <div class="progress-bar" style="width: 76%" role="progressbar" aria-valuenow="76" aria-valuemin="0" aria-valuemax="100" aria-label="76% Complete">
+                                  <span class="visually-hidden">76% Complete</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card card-sm">
+          <div class="card-header">
+            <h3 class="card-title">常用工具</h3>
+          </div>
+          <div class="card-body">
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3">
+        <div class="card card-sm mb-3">
+          <div class="card-header">
+            <h3 class="card-title">版本日历</h3>
+          </div>
+        </div>
+        <div class="card card-sm">
+          <div class="card-header">
+            <h3 class="card-title">常用链接</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+@end

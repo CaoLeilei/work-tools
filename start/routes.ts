@@ -10,6 +10,7 @@
 import router from '@adonisjs/core/services/router'
 const HomeController = () => import('#controllers/home_controller')
 const UsersController = () => import('#controllers/users_controller')
+const WorkspacesController = () => import('#controllers/workspaces_controller')
 
 router.get('/', async ({ response }) => {
   response.redirect('/workspace')
@@ -22,6 +23,6 @@ router.group(() => {
 })
 
 router.group(() => {
-  router.get('/workspace', [HomeController, 'workspace'])
-  router.get('/workspace/:id', [HomeController, 'workspace'])
+  router.get('/workspace', [WorkspacesController, 'index'])
+  router.get('/workspace/projects', [WorkspacesController, 'projects'])
 })
